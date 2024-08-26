@@ -8,8 +8,12 @@ const enUS = {
     join_room_success: 'Join room success',
     join_room_fail: 'Join room fail',
     chat: 'Chat',
+    raise: 'Raise',
+    lower: 'Lower',
+    participants: '{num} Participants',
     question_and_answer: 'Q&A',
     members: 'Members',
+    more:'More',
     announcement: 'Notice',
     announcement_content: 'Content cannot exceed 500',
     all_mute: 'All Mute',
@@ -84,6 +88,13 @@ const enUS = {
   fcr_participants_tips_lower_hand: 'Lower Hand',
   fcr_chat_options_no_one_room: 'The student and you are not in the same room, so it is impossible to operate.',
   fcr_application_screen_share: 'Screen Share',
+  fcr_more_tip_title:'Files',
+  fcr_more_options_whiteboard:'Whiteboard',
+  fcr_more_options_youtube:'Youtube',
+  fcr_more_options_tutor_scream:'Tutor‘s Scream',
+  fcr_more_options_page_notice:'notice tooltip',
+  fcr_more_tip_second_title:'Apps',
+  fcr_more_options_poll:'Poll'
 };
 
 export default enUS;
