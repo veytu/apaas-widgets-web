@@ -93,6 +93,9 @@ export const PollH5 = observer(() => {
       setIsSubmitting(false);
     }
   };
+
+  console.log('minimize',minimize,JSON.stringify(minimize));
+  
   return minimize ? (
     <>
       {isLandscape
@@ -106,7 +109,9 @@ export const PollH5 = observer(() => {
                 <SvgImgMobile
                   forceLandscape={forceLandscape}
                   landscape={isLandscape}
-                  type={SvgIconEnum.POLL}></SvgImgMobile>
+                  type={SvgIconEnum.POLL_NEW}
+                  size={26}
+                  ></SvgImgMobile>
               </div>
               <div className={classNames('fcr-mobile-poll-widget-minimize-content', !isShow && 'hidden')} style={{ width: `${width}px`, transition: 'width 0.2s linear'}}>
                 <span>{transI18n('widget_polling.appName')}</span>
@@ -114,7 +119,7 @@ export const PollH5 = observer(() => {
                   forceLandscape={forceLandscape}
                   colors={{ iconPrimary: '#fff' }}
                   landscape={isLandscape}
-                  type={SvgIconEnum.POLL_ICON}
+                  type={SvgIconEnum.POLL}
                   size={12}></SvgImgMobile>
               </div>
               
@@ -131,7 +136,9 @@ export const PollH5 = observer(() => {
                 <SvgImgMobile
                   forceLandscape={forceLandscape}
                   landscape={isLandscape}
-                  type={SvgIconEnum.POLL}></SvgImgMobile>
+                  type={SvgIconEnum.POLL_NEW}
+                  size={26}
+                  ></SvgImgMobile>
               </div>
 
               <div className={classNames('fcr-mobile-poll-widget-minimize-content', !isShow && 'hidden')} style={width !== null ? { width: `${width}px`, transition: 'all 0.2s linear'} : { width: 'fit-content'}}>
@@ -161,7 +168,7 @@ export const PollH5 = observer(() => {
           <SvgImgMobile
             forceLandscape={forceLandscape}
             landscape={isLandscape}
-            type={SvgIconEnum.CLOSE}></SvgImgMobile>
+            type={SvgIconEnum.POLL_CLOSE}></SvgImgMobile>
         </div>
         <div className="fcr-mobile-poll-widget-modal-content">
           <div
@@ -239,13 +246,13 @@ export const PollH5 = observer(() => {
                     forceLandscape={forceLandscape}
                     landscape={isLandscape}
                     type={SvgIconEnum.FCR_BTN_LOADING}
-                    size={48}></SvgImgMobile>
+                    size={40}></SvgImgMobile>
                 ) : (
                   <SvgImgMobile
                     forceLandscape={forceLandscape}
                     landscape={isLandscape}
                     type={SvgIconEnum.TICK}
-                    size={48}></SvgImgMobile>
+                    size={40}></SvgImgMobile>
                 )}
               </div>
             )}
