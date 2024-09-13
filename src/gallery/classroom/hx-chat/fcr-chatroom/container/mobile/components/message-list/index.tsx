@@ -276,7 +276,7 @@ const TextMessage = observer(({ message, lastMsg }: { message: AgoraIMMessageBas
                 size={16}
               />}
               <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : isSelfMessage ? 'var(--inverse-text-primary, #FEFEFE)' : getNameColor(textMessage.ext?.nickName || '') }}>
-                <span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{textMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Turtor)' : ''}`}
+                <span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{textMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Tutor)' : ''}`}
               </span>
               {textMessage?.ts && (
                 <div className="fcr-chat-message-list-item-time">
@@ -297,7 +297,7 @@ const TextMessage = observer(({ message, lastMsg }: { message: AgoraIMMessageBas
               <span className="fcr-chat-private-tag fcr-chat-private-tag-right">
                 <span >{transI18n('fcr_chat_label_i')}</span>
                 <span className='fcr-text-send-to'>{transI18n('fcr_chat_label_i_said_to')}</span>
-                <span className='fcr-chatroom-mobile-message-item-nickname' ><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : textMessage.ext?.receiverList?.[0].nickName} </span>{`${isToTeacher ? '(Turtor)' : ''}`}</span>
+                <span className='fcr-chatroom-mobile-message-item-nickname' ><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : textMessage.ext?.receiverList?.[0].nickName} </span>{`${isToTeacher ? '(Tutor)' : ''}`}</span>
                 {isPrivate && <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>}
               </span>
               {textMessage?.ts && (
@@ -322,7 +322,7 @@ const TextMessage = observer(({ message, lastMsg }: { message: AgoraIMMessageBas
                   size={16}
                 />}
                 <span className="fcr-chat-private-tag">
-                  <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(textMessage.ext?.nickName || '') }} ><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : message.ext?.nickName}</span>{`${isTeacherMessage ? '(Turtor)' : ''}`} </span>
+                  <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(textMessage.ext?.nickName || '') }} ><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : message.ext?.nickName}</span>{`${isTeacherMessage ? '(Tutor)' : ''}`} </span>
                   {isPrivate && <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>}
                 </span>
                 {textMessage?.ts && (
@@ -405,7 +405,7 @@ const ImageMessage = observer(
                   type={SvgIconEnum.TEACHER_ICON}
                   size={16}
                 />}
-                <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : isSelfMessage ? 'var(--inverse-text-primary, #FEFEFE)' : getNameColor(imageMessage.ext?.nickName || '') }}><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{imageMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Turtor)' : ''}`}</span>
+                <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : isSelfMessage ? 'var(--inverse-text-primary, #FEFEFE)' : getNameColor(imageMessage.ext?.nickName || '') }}><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{imageMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Tutor)' : ''}`}</span>
                 {imageMessage?.ts && (
                   <div className="fcr-chat-message-list-item-time">
                     {/* {dayjs(imageMessage.ts).format(isSelfMessage ? 'MM-DD hh:mm A' : 'YYYY-MM-DD hh:mm A')} */}
@@ -429,7 +429,7 @@ const ImageMessage = observer(
                   <span className="fcr-chat-private-tag">
                     <span >{transI18n('fcr_chat_label_i')}</span>
                     <div className='fcr-text-send-to' style={{ display: 'inline-block' }}>{transI18n('fcr_chat_label_i_said_to')}</div>
-                    <span className='fcr-chatroom-mobile-message-item-nickname'><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : imageMessage.ext?.receiverList?.[0].nickName}</span>{`${isToTeacher ? '(Turtor)' : ''}`}</span>
+                    <span className='fcr-chatroom-mobile-message-item-nickname'><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : imageMessage.ext?.receiverList?.[0].nickName}</span>{`${isToTeacher ? '(Tutor)' : ''}`}</span>
                     {isPrivate && <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>}
                   </span>
                   {imageMessage?.ts && (
@@ -461,7 +461,7 @@ const ImageMessage = observer(
                     size={16}
                   />}
                   <span className="fcr-chat-private-tag">
-                    <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(imageMessage.ext?.nickName || '') }}><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : imageMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Turtor)' : ''}`} </span>
+                    <span className='fcr-chatroom-mobile-message-item-nickname' style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(imageMessage.ext?.nickName || '') }}><span className='fcr-chatroom-private-dialog-chat-input-chat-list-name-val-eplisis'>{!isPrivate ? groupName : imageMessage.ext?.nickName}</span>{`${isTeacherMessage ? '(Tutor)' : ''}`} </span>
                     {isPrivate && <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>}
                   </span>
                   {imageMessage?.ts && (
@@ -509,7 +509,7 @@ const CustomMessage = observer(({ message }: { message: AgoraIMMessageBase }) =>
           <span className="fcr-chat-private-tag">
             <span >{transI18n('fcr_chat_label_i')}</span>
             <div className='fcr-text-send-to'>{transI18n('fcr_chat_label_i_said_to')}</div>
-            <span >{`${cmdMessage.ext?.receiverList?.[0].nickName}${isToTeacher ? '(Turtor)' : ''}`}</span>
+            <span >{`${cmdMessage.ext?.receiverList?.[0].nickName}${isToTeacher ? '(Tutor)' : ''}`}</span>
             <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>
           </span>
           {cmdMessage?.ts && (
@@ -529,7 +529,7 @@ const CustomMessage = observer(({ message }: { message: AgoraIMMessageBase }) =>
               type={SvgIconEnum.TEACHER_ICON}
               size={16}
             />}
-            <span style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(cmdMessage.ext?.nickName || '') }}>{`${cmdMessage.ext?.nickName}${isTeacherMessage ? '(Turtor)' : ''}`}</span>
+            <span style={{ color: isTeacherMessage ? 'var(--head-4, #D2DB0E)' : getNameColor(cmdMessage.ext?.nickName || '') }}>{`${cmdMessage.ext?.nickName}${isTeacherMessage ? '(Tutor)' : ''}`}</span>
             <span className="fcr-text-yellow">({transI18n('fcr_chat_label_private')})</span>
           </span>
         </div>
