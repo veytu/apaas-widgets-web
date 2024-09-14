@@ -98,6 +98,8 @@ export enum AgoraExtensionRoomEvent {
   SetCurrentApplication = 'set-current-application',
   //默认当前应用
   DefaultCurrentApplication = 'default-current-application',
+  //打开share || whiteboard 等widget
+  OpenWidget = 'open-widget',
 }
 
 /**
@@ -183,4 +185,6 @@ export enum AgoraExtensionWidgetEvent {
   QueryMobileCallState = 'query-mobile-call-state',
   PollMinimizeStateChanged = 'poll-minimize-state-changed',
   QueryPollMinimizeState = 'query-poll-minimize-state',
+  //打开关闭share || whiteboard 等widget
+  OpenWidget = 'open-widget',
 }

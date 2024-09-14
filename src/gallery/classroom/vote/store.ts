@@ -50,7 +50,22 @@ export class PluginStore {
       messageType: AgoraExtensionWidgetEvent.PollMinimizeStateChanged,
       onMessage: this._pollMinimizeStateChanged,
     });
+
     this._widget.broadcast(AgoraExtensionWidgetEvent.RequestOrientationStates, undefined);
+  }
+
+  @observable pollBottom: string = '67px';
+
+
+  @action.bound
+  _handlePollBottom(type: string, visible: any) {
+    if (type === 'widget' && visible?.visible) {
+      this.pollBottom = '163px';
+    } else if (type === 'whiteBoardIcon' && Array.isArray(visible) && visible?.length > 1 && visible[1]) {
+      this.pollBottom = '227px';
+    } else {
+      this.pollBottom = '67px';
+    }
   }
 
   @observable minimize = true;
@@ -176,7 +191,7 @@ export class PluginStore {
           Toast.show({
             type: 'error',
             text: JSON.stringify(e),
-            closeToast: () => {},
+            closeToast: () => { },
           });
           reject(e);
         });
