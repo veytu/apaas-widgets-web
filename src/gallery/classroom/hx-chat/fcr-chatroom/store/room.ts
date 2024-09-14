@@ -7,6 +7,8 @@ import { transI18n, bound, Scheduler, AgoraWidgetBase } from 'agora-common-libs'
 import { AgoraExtensionRoomEvent, AgoraExtensionWidgetEvent } from '../../../../../events';
 import { OrientationEnum } from '../../type';
 import { EduClassroomConfig, EduStream } from 'agora-edu-core';
+import { FcrBoardWidget } from '../../../../../../src/classroom';
+
 export enum MobileCallState {
   Initialize = 'initialize',
   Processing = 'processing',
@@ -15,6 +17,8 @@ export enum MobileCallState {
   VideoAndVoiceCall = 'videoAndVoiceCall',
   DeviceOffCall = 'deviceOffCall',
 }
+
+
 export class RoomStore {
   private _disposers: (() => void)[] = [];
   roomName = this._widget.classroomConfig.sessionInfo.roomName;
@@ -159,7 +163,7 @@ export class RoomStore {
     }
     return arr;
   }
-
+ 
   /**
    * 重置默认当前的weidget，如果未设置
    */
