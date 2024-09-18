@@ -14,7 +14,6 @@
 }
 
 .fcr-mobile-slide__close {
-  margin-left: 5px ;
   border-radius: 18px;
   background: var(--background-dark, #151515);
 
@@ -47,10 +46,10 @@
 .verify-tips {
   width: calc(100% - 46px);
   height: 100%;
-  color:  var(--inverse-text-primary, #FEFEFE);
+  color: #fff;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   font-size: 14px;
   font-weight: 400;

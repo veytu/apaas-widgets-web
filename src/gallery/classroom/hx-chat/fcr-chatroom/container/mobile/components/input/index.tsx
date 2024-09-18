@@ -24,6 +24,9 @@ export const FcrChatRoomH5Inputs = observer(
     onShowEmojiChanged: (show: boolean) => void;
     emojiContainer: HTMLDivElement | null;
   }) => {
+    const [inputFocus, setInputFocus] = useState(false);
+    const [text, setText] = useState('');
+    const [isShowStudents, setIsShowStudents] = useState(false);
     const [isShowChat, setIsShowChat] = useState(false);
     const [isShowApplication, setIsShowApplication] = useState(false);
     const [collectVisible, setCollectVisible] = useState(false);
