@@ -24,6 +24,7 @@ import { getNameColor } from '@components/avatar/helper';
 import { splitTextAndUrls, urlRegex } from '../../../../../../../../utils/split-url';
 export const MessageList = observer(() => {
   const {
+    setUnreadCount,
     messageStore: {
       messageList,
       isBottom,
@@ -57,6 +58,7 @@ export const MessageList = observer(() => {
           setIsBottom(false);
         } else {
           setIsBottom(true);
+          setUnreadCount(0);
         }
     }, 200),
     [],
