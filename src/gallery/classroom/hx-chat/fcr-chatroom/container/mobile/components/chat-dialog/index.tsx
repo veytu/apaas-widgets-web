@@ -16,6 +16,7 @@ import { MessageList } from '../message-list';
 
 const ChatDialog = observer(({ setIsShowChat }: { setIsShowChat: (arg0: boolean) => void }) => {
   const {
+    setUnreadCount,
     roomStore: {
       addToast,
       isLandscape,
@@ -72,6 +73,7 @@ const ChatDialog = observer(({ setIsShowChat }: { setIsShowChat: (arg0: boolean)
   }
   const handleCloseDialog = () => {
     setIsShowChat(false)
+    setUnreadCount(0)
   }
 
   const handleFullScreenDialog = () => {
